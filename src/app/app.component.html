@@ -1,0 +1,30 @@
+<ion-app >
+  <ion-menu *ngIf="islogin1()" side="start" menuId="first" contentId="main">
+    <ion-header>
+    </ion-header>
+    <ion-content class="menu-content">
+<ion-list>
+  <ion-menu-toggle>
+    <ion-avatar class="avatar">
+      <img alt="Silhouette of a person's head" (click)="addphoto()" [src]="path" onerror="this.onerror=null;this.src='https://ionicframework.com/docs/demos/api/avatar/avatar.svg';"/>
+    </ion-avatar>
+  </ion-menu-toggle>
+<h3 class="avatar">UserName: {{signups[1].username}}</h3>
+<div class="verticalLine"></div><div class="verticalLine"></div>
+</ion-list>
+<ion-menu-toggle>
+  <ion-button fill="clear" (click)="go()" class="btn">home</ion-button>
+</ion-menu-toggle>
+<ion-menu-toggle>
+  <ion-button fill="clear" (click)="go()" class="btn">signup</ion-button>
+</ion-menu-toggle>
+<ion-menu-toggle>
+  <ion-button fill="clear" (click)="logout()" class="btn">logout</ion-button>
+</ion-menu-toggle>
+
+    </ion-content>
+  </ion-menu>
+
+  <ion-router-outlet id="main">
+  </ion-router-outlet>
+</ion-app>

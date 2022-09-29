@@ -1,0 +1,26 @@
+.verticalLine {
+  width:100%;
+  height:0.1em;
+  background:#eb445a;
+  margin-top: 0;
+  position: relative;
+  margin-left: 0;
+}
+.btn{
+  width: 100%;
+  height: 4em;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-shadow: none !important;
+  color: #eb445a;
+}
+.btn:hover{
+  background-color: #eb445a;
+  color: white;
+}
+.avatar{
+  margin: 0.5em;
+  font-family: cursive;
+
+}

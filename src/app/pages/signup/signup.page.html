@@ -1,0 +1,47 @@
+
+<ion-content>
+  <form #sigform="ngForm" (ngSubmit)="onSubmit(sigform)">
+<div class="container">
+  <ion-grid>
+    <ion-row>
+      <ion-col size="8" offset="2">
+        <ion-label class="logtext" color="danger">Signup</ion-label>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8" offset="2">
+        <ion-list>
+          <ion-item >
+            <ion-label position="floating" >UserName</ion-label>
+            <ion-input type="text" name="username" required ngModel #usercntrl="ngModel"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password</ion-label>
+            <ion-input type="Password" required name="password" [(ngModel)]="account.password" ngModel minlength="6" #passcntrl="ngModel"></ion-input>
+          </ion-item>
+          <p *ngIf="!passcntrl.valid && passcntrl.touched">password must be min 6 characters</p>
+          <ion-item>
+            <ion-label position="floating">Confirm Password</ion-label>
+            <ion-input type="Password" required name="confirmpassword" pattern="{{passcntrl.value}}" ngModel  #confcntrl="ngModel" ></ion-input>
+          </ion-item>
+          <p *ngIf="!confcntrl.valid && confcntrl.touched && confcntrl.errors.pattern">password dosn't match</p>
+
+          <app-details [passwordToCheck]="account.password" [barLabel]="barLabel">
+          </app-details>
+            <ion-item>
+            <ion-label position="floating">Phone</ion-label>
+            <ion-input type="number" ></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="8" offset="2">
+        <ion-button color="danger" class="btn1" type="submit">Signup</ion-button>
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</div>
+</form>
+</ion-content>

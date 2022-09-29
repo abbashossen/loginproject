@@ -1,0 +1,68 @@
+
+*{
+  margin: 0;
+}
+
+
+.container {
+  text-align: center;
+
+  height: 100%;
+  width: 100%;
+  display: flex;
+
+}
+
+
+.btn{
+background: transparent;
+border-radius: 50px;
+  width: 100%;
+  margin-top: 2em;
+  text-decoration: none;
+  color: #eb445a;
+  margin-left: 2px;
+}
+
+.input1{
+
+margin-top: 2em;
+}
+.btn1{
+  background: #eb445a;
+  border-radius: 5px;
+   border: 0;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    height: 2.5em;
+    color: white;
+    font-family: Arial;
+    width: 5em;
+  }
+.logtext {
+  font-size: 70px;
+  line-height: 4em;
+  margin-bottom: 4em;
+  font-family: cursive;
+
+
+
+}
+
+
+
+.username{
+  width: 100%;
+  border-radius: 15px;
+  border-color: #eb445a;
+  height: 2.5em;
+  padding-left: 0.5em;
+  margin-bottom: 1em;
+  font-family: Arial;
+
+
+}
+.username::placeholder{
+  color: black;
+  font-family: Arial;
+}
